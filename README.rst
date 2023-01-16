@@ -40,7 +40,7 @@ Running type checks with mypy:
 
 ::
 
-  $ mypy peer_lending
+  $ mypy mapayl
 
 Test coverage
 ^^^^^^^^^^^^^

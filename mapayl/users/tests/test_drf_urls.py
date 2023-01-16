@@ -1,7 +1,7 @@
 import pytest
 from django.urls import resolve, reverse
 
-from peer_lending.users.models import User
+from mapayl.users.models import User
 
 pytestmark = pytest.mark.django_db
 

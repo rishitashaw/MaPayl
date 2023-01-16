@@ -267,7 +267,7 @@ tags
 ### Project template
 
 MailHog
-peer_lending/media/
+mapayl/media/
 
 .pytest_cache/
 

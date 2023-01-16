@@ -7,7 +7,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build -c .
 SOURCEDIR     = .
 BUILDDIR      = ./_build
-APP = ../peer_lending
+APP = ../mapayl
 
 
 .PHONY: help livehtml apidocs Makefile
@@ -22,7 +22,7 @@ livehtml:
 
 # Outputs rst files from django application code
 apidocs:
-	sphinx-apidoc -o $(SOURCEDIR)/api ../peer_lending
+	sphinx-apidoc -o $(SOURCEDIR)/api ../mapayl
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

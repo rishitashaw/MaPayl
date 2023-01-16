@@ -4,8 +4,8 @@ Module for all Form Tests.
 import pytest
 from django.utils.translation import ugettext_lazy as _
 
-from peer_lending.users.forms import UserCreationForm
-from peer_lending.users.models import User
+from mapayl.users.forms import UserCreationForm
+from mapayl.users.models import User
 
 pytestmark = pytest.mark.django_db
 

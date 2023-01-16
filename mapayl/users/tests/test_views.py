@@ -8,10 +8,10 @@ from django.http import HttpRequest
 from django.test import RequestFactory
 from django.urls import reverse
 
-from peer_lending.users.forms import UserChangeForm
-from peer_lending.users.models import User
-from peer_lending.users.tests.factories import UserFactory
-from peer_lending.users.views import (
+from mapayl.users.forms import UserChangeForm
+from mapayl.users.models import User
+from mapayl.users.tests.factories import UserFactory
+from mapayl.users.views import (
     UserRedirectView,
     UserUpdateView,
     user_detail_view,

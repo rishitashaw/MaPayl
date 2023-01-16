@@ -1,8 +1,8 @@
 import pytest
 from django.test import RequestFactory
 
-from peer_lending.users.api.views import UserViewSet
-from peer_lending.users.models import User
+from mapayl.users.api.views import UserViewSet
+from mapayl.users.models import User
 
 pytestmark = pytest.mark.django_db
 

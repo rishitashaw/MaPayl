@@ -1,7 +1,7 @@
 import pytest
 
-from peer_lending.users.models import User
-from peer_lending.users.tests.factories import UserFactory
+from mapayl.users.models import User
+from mapayl.users.tests.factories import UserFactory
 
 
 @pytest.fixture(autouse=True)

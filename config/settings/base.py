@@ -6,8 +6,8 @@ from pathlib import Path
 import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-# peer_lending/
-APPS_DIR = ROOT_DIR / "peer_lending"
+# mapayl/
+APPS_DIR = ROOT_DIR / "mapayl"
 env = environ.Env()
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -77,7 +77,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "peer_lending.users.apps.UsersConfig",
+    "mapayl.users.apps.UsersConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -86,7 +86,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # MIGRATIONS
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "peer_lending.contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "mapayl.contrib.sites.migrations"}
 
 # AUTHENTICATION
 # ------------------------------------------------------------------------------
@@ -186,7 +186,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "peer_lending.utils.context_processors.settings_context",
+                "mapayl.utils.context_processors.settings_context",
             ],
         },
     }
@@ -283,12 +283,12 @@ ACCOUNT_UNIQUE_EMAIL = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "peer_lending.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "mapayl.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "peer_lending.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "mapayl.users.adapters.SocialAccountAdapter"
 
 # ACCOUNT_FORMS = (
-#     {'signup': 'peer_lending.users.forms.CustomSignupForm'}
+#     {'signup': 'mapayl.users.forms.CustomSignupForm'}
 # )
 # django-compressor
 # ------------------------------------------------------------------------------
