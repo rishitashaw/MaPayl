@@ -57,11 +57,11 @@ class CustomSignupForm(forms.Form):
     #     choices=ACCOUNT_TYPE,
     #     help_text=_("Choose the type of account."))
 
-    first_name = forms.CharField(max_length=50, label='First Name')
+    first_name = forms.CharField(max_length=50)
 
-    last_name = forms.CharField(max_length=30, label='Last Name')
+    last_name = forms.CharField(max_length=30)
 
-    email = forms.CharField(max_length=30, label='')
+    email = forms.CharField(max_length=30)
 
     # country = forms.ModelChoiceField(
     #     queryset=Country.objects.filter(accept_signup=True).order_by('name'),
@@ -74,10 +74,13 @@ class CustomSignupForm(forms.Form):
         self.fields['last_name'].widget.attrs['placeholder'] = _('Legal Last Names')
         self.fields['email'].widget.attrs['placeholder'] = _('Enter a valid Email Address')
         # self.fields['country'].label = False
-        self.fields['email'].help_text = _('So we can send you confirmation of your registration')
-        self.fields['first_name'].help_text = _('As show in your documents')
-        self.fields['last_name'].help_text = _('As show in your documents')
-        # self.fields['account_type'].label = False
+        # self.fields['email'].help_text = _('So we can send you confirmation of your registration')
+        # self.fields['first_name'].help_text = _('As show in your documents')
+        # self.fields['last_name'].help_text = _('As show in your documents')
+        self.fields['first_name'].label = False
+        self.fields['last_name'].label = False
+        self.fields['email'].label = False
+
         # self.helper = FormHelper()
         # self.helper.form_show_labels = False
 
