@@ -51,7 +51,7 @@ class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, max_length=255)
     username = None
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['first_name', 'last_name']
 
     KYC_STATUS = (
         ('unverified', _('Unverified')),
@@ -82,7 +82,7 @@ class User(AbstractUser):
         blank=True, null=True,
         help_text=_("Legal Last names of the client."))
 
-    email = models.CharField(
+    email = models.EmailField(
         verbose_name=_('Email Address'),
         max_length=125,
         unique=True,
