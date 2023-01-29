@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static i18n compress%}
 
 
@@ -16,58 +15,65 @@
                     <h1>Get personal loans of up to $50,000</h1>
                     <div class="lstban">
                         <ul>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Get low rates</li>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Apply online in minutes</li>
-                            <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Convenient Payback</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Get low rates</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Apply online in minutes</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Convenient Payback</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="ban-frm">
-                    <h2>How much do you need?</h2>
-                    <div class="inp-sty">
-                        <input type="text" placeholder="Earn upto $50,000">
-                    </div>
-                    <div class="inp-sty">
-                        <select name="" id="">
-                            <option value="">What do you need it for?</option>
-                            <option value="">Credit Cards</option>
-                            <option value="">Debt Consolidation</option>
-                            <option value="">Student Loans</option>
-                            <option value="">Home Improvement</option>
-                            <option value="">student loans</option>
-                            <option value="">Medical/Dental</option>
-                            <option value="">Busin</option>
-                            <option value="">Large Purchase</option>
-                            <option value="">Automobile</option>
-                            <option value="">Special Occassion</option>
-                            <option value="">Vacation</option>
-                            <option value="">Baby or Adoption</option>
-                            <option value="">Other</option>
-                        </select>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <form action="" class="col-md-6 col-sm-6 email_list form-container" data-toggle="validator" method="post">
+                {% csrf_token %}
 
-                    </div>
-                    <button type="submit">Check your rate</button>
-                </div>
-            </div>
+
+                <h2>How much do you need?</h2>
+                <input class="form-control m-2 p-2" type="text" placeholder="Earn upto $50,000">
+                <select class="form-control m-2 p-2" name="" id="">
+                    <option value="">What do you need it for?</option>
+                    <option value="">Credit Cards</option>
+                    <option value="">Debt Consolidation</option>
+                    <option value="">Student Loans</option>
+                    <option value="">Home Improvement</option>
+                    <option value="">student loans</option>
+                    <option value="">Medical/Dental</option>
+                    <option value="">Busin</option>
+                    <option value="">Large Purchase</option>
+                    <option value="">Automobile</option>
+                    <option value="">Special Occassion</option>
+                    <option value="">Vacation</option>
+                    <option value="">Baby or Adoption</option>
+                    <option value="">Other</option>
+                </select>
+
+                <button type="submit" class="form-control-submit-button">Check your rate</button>
+
+            </form>
+
         </div>
 
     </div> <!-- banner end -->
 </div>
-<div class="clear"></div>
 <section>
-    <div class="container">
-        <div class="clientbx">
-            <ul>
-                <li><img src="assets/images/reuters.svg" alt=""> </li>
-                <li><img src="assets/images/bloomberg.svg" alt=""> </li>
-                <li><img src="assets/images/npr.svg" alt=""> </li>
-                <li><img src="assets/images/nbc.svg" alt=""> </li>
-            </ul>
-        </div> <!-- client box end -->
-    </div>
+    <!-- Image Slider -->
+    <div class="slider-container mt-5 mb-5">
+        <div class="swiper-container image-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="img-fluid" src="{% static 'images/customer-logo-1.png'%}" alt="alternative">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid" src="{% static 'images/customer-logo-2.png'%}" alt="alternative">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid" src="{% static 'images/customer-logo-3.png'%}" alt="alternative">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid" src="{% static 'images/customer-logo-6.png'%}" alt="alternative">
+                </div>
+            </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper container -->
+    </div> <!-- end of slider-container -->
+    <!-- end of image slider -->
 </section>
 
 <section class="main-goals">
@@ -80,30 +86,30 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="bx1">
                     <div class="imbx">
-                        <img src="assets/images/home(1).svg" alt="">
+                        <img src="{% static 'images/description-1.png'%}" height="200" alt="">
                     </div>
                     <h5>Home Improvement Loans</h5>
-                    <p>Whether you want to remodel your<br>kitchen or upgrade security. Lendy<br>has you covered.</p>
+                    <p>Whether you want to remodel your<br>kitchen or upgrade security. MaPayl<br>has you covered.</p>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="bx1">
                     <div class="imbx">
-                        <img src="assets/images/car.svg" alt="">
+                        <img src="{% static 'images/description-2.png'%}" height="200" alt="">
                     </div>
                     <h5>Auto Financing</h5>
-                    <p>With Lendy you can get any kind of<br> vehicle you want in any condition<br> you prefer.</p>
+                    <p>With MaPayl you can get any kind of<br> vehicle you want in any condition<br> you prefer.</p>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="bx1">
                     <div class="imbx">
-                        <img src="assets/images/credit-card(2).svg" alt="">
+                        <img src="{% static 'images/description-3.png'%}" height="200" alt="">
                     </div>
                     <h5>Credit card Consolidation</h5>
-                    <p>Refinance your credit cards with a <br>personalized loan for Lendy and <br>simplify your
+                    <p>Refinance your credit cards with a <br>personalized loan for MaPayl and <br>simplify your
                         finances.</p>
                 </div>
             </div>
@@ -120,7 +126,7 @@
                 <div class="gtl-lst">
                     <div class="media">
                         <div class="media-left">
-                            <h4>1</h4>
+                            <h4>1. &nbsp;</h4>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Check your rate</h4>
@@ -133,7 +139,7 @@
                 <div class="gtl-lst">
                     <div class="media">
                         <div class="media-left">
-                            <h4>2</h4>
+                            <h4>2. &nbsp;</h4>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Choose your loan</h4>
@@ -145,7 +151,7 @@
                 <div class="gtl-lst">
                     <div class="media">
                         <div class="media-left">
-                            <h4>3</h4>
+                            <h4>3. &nbsp;</h4>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Get your funds</h4>

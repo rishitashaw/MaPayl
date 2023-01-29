@@ -2130,3 +2130,7 @@ a:hover.back-to-top {
 .clear {
   min-height: 200px;
 }
+
+ul li {
+  list-style: none !important;
+}
