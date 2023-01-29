@@ -77,10 +77,8 @@ class CustomSignupForm(forms.Form):
         # self.fields['email'].help_text = _('So we can send you confirmation of your registration')
         # self.fields['first_name'].help_text = _('As show in your documents')
         # self.fields['last_name'].help_text = _('As show in your documents')
-        self.fields['first_name'].label = False
-        self.fields['last_name'].label = False
-        self.fields['email'].label = False
-
+        self.fields['first_name'].label = _('')
+        self.fields['last_name'].label = _('')
         # self.helper = FormHelper()
         # self.helper.form_show_labels = False
 
