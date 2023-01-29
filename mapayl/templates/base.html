@@ -113,10 +113,42 @@
               <a class="nav-link page-scroll" href="{% url 'about' %}">About</a>
             </li>
             {% if request.user.is_authenticated %}
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle page-scroll" href="{% url 'borrow' %}" id="navbarDropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">Borrow</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#how-it-works"><span class="item-text">how it work</span></a>
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="#"><span class="item-text">loan types</span></a>
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="#"><span class="item-text">check your rate</span></a>
+              </div>
+            </li>
+            <!-- end of dropdown menu -->
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle page-scroll" href="{% url 'invest' %}" id="navbarDropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">Invest</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#how-it-works"><span class="item-text">how it work</span></a>
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="#benefits"><span class="item-text">benefits</span></a>
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="#"><span class="item-text">get started</span></a>
+              </div>
+            </li>
+            <!-- end of dropdown menu -->
+
+
             <li class="nav-item">
               {# URL provided by django-allauth/account/urls.py #}
               <a class="nav-link page-scroll"
                 href="{% url 'users:detail' request.user.pk  %}">{% trans "My Profile" %}</a>
+            </li>
+            <li class="nav-item">
+              {# URL provided by django-allauth/account/urls.py #}
+              <a class="nav-link page-scroll" href="/admin">{% trans "Admin" %}</a>
             </li>
             <li class="nav-item">
               {# URL provided by django-allauth/account/urls.py #}
@@ -163,7 +195,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="footer-col first">
-              <h4>About Tivo</h4>
+              <h4>About MaPayl</h4>
               <p class="p-small">We're passionate about designing and developing one of the best marketing apps in the
                 market</p>
             </div>
@@ -196,8 +228,8 @@
                 </li>
                 <li class="media">
                   <i class="fas fa-envelope"></i>
-                  <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact@tivo.com</a> <i
-                      class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
+                  <div class="media-body"><a class="white" href="mailto:contact@MaPayl.com">contact@MaPayl.com</a> <i
+                      class="fas fa-globe"></i><a class="white" href="#your-link">www.MaPayl.com</a></div>
                 </li>
               </ul>
             </div>

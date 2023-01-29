@@ -1,4 +1,4 @@
-/* Template: Tivo - SaaS App HTML Landing Page Template
+/* Template: MaPayl - SaaS App HTML Landing Page Template
    Author: Inovatik
    Created: Sep 2019
    Description: Master CSS file
@@ -2127,3 +2127,6 @@ a:hover.back-to-top {
   /* end of extra pages */
 }
 /* end of min-width width 1200px */
+.clear {
+  min-height: 200px;
+}
